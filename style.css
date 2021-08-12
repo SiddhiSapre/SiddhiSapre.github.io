@@ -29,9 +29,10 @@ nav{
 }
 
 .logo{
-    width: 40%;
+    width: 10rem;
     cursor: pointer;
     color: #fafafa;
+    position: relative;
 }
 
 .menu-icon{
@@ -91,6 +92,7 @@ nav ul li a:hover{
     margin-top: 90px;
     flex-wrap: wrap;
     justify-content: space-around;
+    position: relative;
 }
 
 .row h1{
@@ -116,3 +118,82 @@ nav ul li a:hover{
     color: #fff;
 }
 
+.toggle-button{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: none;
+    flex-direction: column;
+    width: 40px;
+    height: 30px;
+    justify-content: space-between;
+}
+
+.toggle-button .bar{
+    height: 3.5px;
+    width: 100%;
+    margin: .5px;
+    background-color: #fafafa;
+    border-radius: 10px;
+}
+
+.navbar-links{
+    top:40px;
+    height: 100%;
+}
+
+.navbar-links ul{
+    display: flex;
+}
+
+.navbar-links li{
+    list-style: none;
+}
+
+@media (max-width:1400px){
+
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button{
+        display: flex;
+    }
+
+    .navbar-links{
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li{
+        text-align: center;
+    }
+    .navbar-links ul li a{
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active{
+        display: flex;
+    }
+    
+    .logo{
+        position: relative;
+        top: .75rem;
+    }
+
+    .row{
+        position: absolute;
+    }
+
+    .img-box{
+        max-width: 30%;
+        height: auto;
+
+    }
+}
